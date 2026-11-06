@@ -6,11 +6,13 @@ Windows에 기본으로 들어 있는 C# 컴파일러를 쓰기 때문에 따로
 
 [처음 사용하는 분을 위한 Windows 사용 설명서](먼저읽어주세요_사용설명서.txt)
 
-## 빠른 시작
+## Windows에서 직접 빌드하고 실행하기
 
-1. `build.bat` 더블클릭 → 같은 폴더에 `MyTypingPet.exe`가 생깁니다.
-2. `MyTypingPet.exe` 실행 → 오른쪽 아래에 임시 캐릭터(민트색 동글이)가 나타납니다.
-3. 아무 창에서나 타이핑해 보세요.
+1. GitHub 저장소 상단의 **Code → Download ZIP**을 누르고, 받은 ZIP 파일을 모두 압축 해제합니다.
+2. 압축을 푼 폴더에서 `build.bat`을 더블클릭합니다. Windows의 .NET Framework C# 컴파일러가 같은 폴더에 `MyTypingPet.exe`를 만듭니다.
+3. `MyTypingPet.exe`를 열고 메모장 같은 창에서 타이핑해 보세요. 화면 오른쪽 아래의 펫이 움직입니다.
+
+배포 ZIP에는 소스와 이미지가 들어 있고, 실행 파일은 각자 PC에서 만들어집니다.
 
 ## 내 캐릭터로 바꾸기
 
@@ -82,7 +84,7 @@ build.bat       빌드
 
 ## 알아 두면 좋은 점
 
-- **백신 경고**: 전역 키보드 훅을 쓰기 때문에, 서명 없는 exe는 백신(V3, Windows 보안 등)이 의심할 수 있습니다. 필요하면 예외로 허용하세요.
+- **Windows 보안 정책**은 직접 빌드한 서명 없는 실행 파일에도 적용됩니다. 빌드나 실행이 차단되면 경고 내용을 확인하고, 회사나 학교 PC라면 IT 관리자에게 문의하세요. [Microsoft의 SmartScreen 및 Smart App Control 안내](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
 - **관리자 권한 창**: 관리자 권한으로 실행된 창에서 칠 때는 Windows 보안 정책 때문에 반응하지 않습니다.
 - **설정 초기화**: 레지스트리 `HKCU\Software\MyTypingPet` 키를 지우면 됩니다.
 - **완전히 지우기**: 자동 실행을 켰다면 먼저 끄고, 펫을 종료한 뒤 폴더를 지우면 됩니다.
